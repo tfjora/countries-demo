@@ -52,7 +52,7 @@ function App() {
         countries={countries}
         countriesToVisit={countriesToVisit}
       />
-      <ViewCountry data={countriesToVisit} onRemove={onRemove} onVisited={onVisited} />
+      <ViewCountry countriesToVisit={countriesToVisit} onRemove={onRemove} onVisited={onVisited} />
     </div>
   );
 }
