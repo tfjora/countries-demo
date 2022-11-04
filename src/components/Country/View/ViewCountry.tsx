@@ -4,15 +4,15 @@ import ClearIcon from "@mui/icons-material/Clear";
 import { ICountry } from "../../../_models/country";
 
 type Props = {
-  data: ICountry[];
+  countriesToVisit: ICountry[];
   onRemove: (item: ICountry) => void;
   onVisited: (item: ICountry) => void;
 };
 
-export default function ViewCountry({ data, onRemove, onVisited }: Props) {
+export default function ViewCountry({ countriesToVisit, onRemove, onVisited }: Props) {
   return (
     <div>
-      {data.map((item, index) => {
+      {countriesToVisit.map((item, index) => {
         const color = item.visited ? "success" : "disabled";
         return (
           <div className="wanted-to-visit-container" key={index}>
