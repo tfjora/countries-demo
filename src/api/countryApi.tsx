@@ -9,7 +9,7 @@ const fakeCountryList: ICountryApi[] = [
 ];
 
 export const fetchCountries = async (): Promise<ICountryApi[]> => {
-  return await fetch(`http://api.countrylayer.com/v2/all2?access_key=${apiKey}`)
+  return await fetch(`http://api.countrylayer.com/v2/all?access_key=${apiKey}`)
     .then((response) => response.json())
     .then((actualData) => {
       if (actualData.error) return fakeCountryList;
